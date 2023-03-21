@@ -27,7 +27,7 @@ export class GetKeysForm extends Component<{}, GetKeysFormState> {
     fetchKeys = async (): Promise<void> => {
         const { keySize, keyCount } = this.state;
         const response = await fetch(
-            "http://localhost:9000/api/v1/keys/localhost:9000/enc_key",
+            "http://178.254.28.176:9000/api/v1/keys/178.254.28.176:9000/enc_key",
             {
                 body: JSON.stringify({
                     number: keyCount,
@@ -77,7 +77,7 @@ export class GetKeysForm extends Component<{}, GetKeysFormState> {
                         <h3>Set the Parameters</h3>
                     </hgroup>
                     <form onSubmit={this.onSubmit}>
-                        <fieldset className="get-keys-form">
+                        {/* <fieldset className="get-keys-form">
                             <legend>Master/Slave Settings</legend>
                             <div className="grid">
                                 <label htmlFor="num-keys">Master
@@ -97,7 +97,7 @@ export class GetKeysForm extends Component<{}, GetKeysFormState> {
                                         required />
                                 </label>
                             </div>
-                        </fieldset>
+                        </fieldset> */}
                         <fieldset className="get-keys-form">
                             <legend>Key Size</legend>
                             <input
