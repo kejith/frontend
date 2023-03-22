@@ -29,7 +29,7 @@ export const KeyContainerTable = function KeyContainerTable(props: KeyContainer)
       headers: { "Content-Type": "application/json", },
       method: "GET",
     }
-    let url = `http://178.254.28.176:9000/api/v1/keys/master_ID_1/dec_key`
+    let url = `/api/v1/keys/master_ID_1/dec_key`
 
     const ids = currentTarget.value.split(",")
     if (ids.length === 1) {

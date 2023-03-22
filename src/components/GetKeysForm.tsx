@@ -27,7 +27,7 @@ export class GetKeysForm extends Component<{}, GetKeysFormState> {
     fetchKeys = async (): Promise<void> => {
         const { keySize, keyCount } = this.state;
         const response = await fetch(
-            "http://178.254.28.176:9000/api/v1/keys/178.254.28.176:9000/enc_key",
+            `/api/v1/keys/${window.location.host}/enc_key`,
             {
                 body: JSON.stringify({
                     number: keyCount,
