@@ -29,7 +29,7 @@ export class Example extends Component<ExampleFetchOptions, ExampleState> {
             },
             method: "POST",
         }
-        const url = `http://localhost:9000/api/v1/keys/master_ID_1/enc_key`
+        const url = `/api/v1/keys/master_ID_1/enc_key`
         const response = await fetch(url, fetchOptions);
 
         if (response.ok || response.status === 400) {
